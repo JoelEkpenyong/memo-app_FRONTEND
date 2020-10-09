@@ -1,0 +1,9 @@
+header{
+  padding-right: 8rem;
+  height: 7%;
+
+  position: absolute;
+  width: 100%;
+  padding-top: 2%;
+  z-index: 10;
+}

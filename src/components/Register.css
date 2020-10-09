@@ -1,0 +1,72 @@
+#sign_up{
+  padding:8rem 0 8rem 0 ;
+}
+
+#sign_up p{
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.42rem;
+}
+
+.input_wrapper{
+  width: 30%;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.input_wrapper label{
+  color: #828282;
+  background-color: #4f4f4f;
+  padding: .8rem 1.2rem;
+  opacity: .9;
+  cursor: pointer;
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2rem;
+  border-radius: .5rem;
+
+  position: absolute;
+  top: -12px;
+  left: 10px;
+}
+
+.input_wrapper label:hover{
+  opacity: 1;
+}
+
+.form_input{
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.815rem;
+
+  padding: 1.8rem 2.8rem;
+  width: 100%;
+
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+
+  background-color: #333;
+  color: #fff;
+}
+
+.form_btn{
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.815rem;
+  text-align: center;
+
+  width: 30%;
+  padding: 1.8rem 2.8rem;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+}
+
+.signUp_form span{
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.21rem;
+}
