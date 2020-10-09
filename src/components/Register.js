@@ -1,7 +1,39 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Axios from 'axios'
 import './Register.css'
 
+
+const axios = Axios.create({baseURL: "https://checkme-backend.herokuapp.com/auth"})
+
 const Register = () => {
+  // const [fullname, setName] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [password, setPassword] = useState('')
+ 
+  // const handleInput = (e, setter) => {
+  //   let {target} = e
+  //   let {value} = target
+  //   setter(value)
+  // }
+
+  // const handleSubmit = async () => {
+  //   const user = {fullname, email, password}
+  //   console.log(user)
+  //   let res = await axios.post("/register", user )
+  //   console.log(res)
+  // }
+
+  const [userData, setUserData] = useState({});
+  const handleInput = (e) => {
+    setUserData({...userData, [e.target.name]: e.target.value})
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    console.log(userData)
+    const res = await axios.post("/register", userData)
+    console.log(res.data)
+  }
+
   return (
     <section id="sign_up" className="d-flex flex-column justify-content-center align-items-center">
       <svg className="mt-5" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -10,26 +42,26 @@ const Register = () => {
         <path d="M18 26.864L27.9574 36.7702L42 22.8" stroke="#F2F2F2" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
       <p className="py-5">Lets Create An Account</p>
-        <form className="signUp_form d-flex flex-column justify-content-center align-items-center w-100" onSubmit={(e) => (e.preventDefault())}>
+        <form className="signUp_form d-flex flex-column justify-content-center align-items-center w-100" onSubmit={handleSubmit}>
           <div className="input_wrapper">
             <label htmlFor="name">
               Full name
             </label>
-            <input className="form_input" id="name" type="text" />
+            <input className="form_input" id="name" type="text" name="fullname" /* value={fullname} */ onChange={handleInput} />
           </div>
 
           <div className="input_wrapper">
             <label htmlFor="email">
               Email
             </label>
-            <input className="form_input" id="email" type="email" />
+            <input className="form_input" id="email" type="email" name="email" /* value={email} */ onChange={handleInput}/>
           </div>
 
           <div className="input_wrapper">
             <label htmlFor="password">
               Password
             </label>
-            <input className="form_input" id="password" type="password" />
+            <input className="form_input" id="password" type="password" name="password" /* value={password} */ onChange={handleInput} />
           </div>
 
           <button type="submit" className="form_btn btn_primary mt-4">Create account</button>
