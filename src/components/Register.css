@@ -66,7 +66,25 @@
 }
 
 .signUp_form span{
+  width: 30%;
+  text-align: center;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.21rem;
+  position: relative;
+ 
+}
+
+.signUp_form span::before, 
+.signUp_form span::after{
+  content: '';
+  display: block;
+  width: 14rem;
+  border-bottom: 1px solid #333;
+  position: absolute;
+  top: 5px;
+}
+
+.signUp_form span::before{
+  right: 0;
 }

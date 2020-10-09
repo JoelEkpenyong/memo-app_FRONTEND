@@ -10,7 +10,7 @@ const Register = () => {
         <path d="M18 26.864L27.9574 36.7702L42 22.8" stroke="#F2F2F2" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
       <p className="py-5">Lets Create An Account</p>
-        <form className="signUp_form d-flex flex-column justify-content-center align-items-center w-100">
+        <form className="signUp_form d-flex flex-column justify-content-center align-items-center w-100" onSubmit={(e) => (e.preventDefault())}>
           <div className="input_wrapper">
             <label htmlFor="name">
               Full name
@@ -34,9 +34,9 @@ const Register = () => {
 
           <button type="submit" className="form_btn btn_primary mt-4">Create account</button>
 
-          <span className="py-3 pt-4">OR</span>
+          <span className="my-4 mt-5">OR</span>
 
-          <button type="button" className="form_btn btn_secondary mt-3">
+          <button type="button" className="form_btn btn_secondary mt-4">
             <svg className="mr-3" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.9905 10.4259C19.9905 9.58728 19.9224 8.97532 19.7752 8.34071H10.1992V12.1257H15.8201C15.7068 13.0663 15.0948 14.4829 13.7349 15.4348L13.7159 15.5615L16.7436 17.907L16.9534 17.928C18.8798 16.1488 19.9905 13.5309 19.9905 10.4259Z" fill="#4285F4"/>
               <path d="M10.1992 20.3984C12.953 20.3984 15.2648 19.4918 16.9534 17.928L13.7349 15.4348C12.8737 16.0354 11.7177 16.4547 10.1992 16.4547C7.50211 16.4547 5.21297 14.6755 4.39695 12.2164L4.27734 12.2266L1.12906 14.663L1.08789 14.7775C2.76508 18.1092 6.21016 20.3984 10.1992 20.3984Z" fill="#34A853"/>
