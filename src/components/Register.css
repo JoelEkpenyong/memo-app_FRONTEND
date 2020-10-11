@@ -57,12 +57,19 @@
   font-size: 1.5rem;
   line-height: 1.815rem;
   text-align: center;
+  opacity: .9;
 
   width: 30%;
   padding: 1.8rem 2.8rem;
   border: none;
   border-radius: 1rem;
   outline: none;
+}
+
+.form_btn:hover{
+  text-decoration: none;
+  color: #fff;
+  opacity: 1;
 }
 
 .signUp_form span{
