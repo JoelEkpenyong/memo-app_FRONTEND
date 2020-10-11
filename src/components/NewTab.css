@@ -1,0 +1,31 @@
+input.new_task-input{
+  padding: .5rem 1.5rem;
+  background-color: #333;
+  border: 0.5px solid #4f4f4f;
+  border-radius: 1rem;
+  
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
+input.new_task-input:focus{
+  outline: none;
+}
+
+.new_task-form button{
+  padding: .5rem 1.5rem;
+  outline: none;
+  border: none;
+  background-color: var(--primary);
+  border-radius: 0 1rem 1rem 0;
+  border: 0.5px solid var(--primary);
+  color: #f2f2f2;
+  font-size: 1.3rem;
+  line-height: 1.573rem;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}

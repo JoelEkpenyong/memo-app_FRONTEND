@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './Register.css'
 
 const Login = () => {
@@ -25,7 +26,7 @@ const Login = () => {
             <input className="form_input" id="password" type="password" />
           </div>
 
-          <button type="submit" className="form_btn btn_primary mt-5">Log in</button>
+          <Link to="/dashboard" type="submit" className="form_btn btn_primary mt-5">Log in</Link>
 
           <span className="my-4 mt-5">OR</span>
 

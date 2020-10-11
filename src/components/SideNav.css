@@ -1,0 +1,78 @@
+#side_nav{
+  width: 300px;
+  height: 100vh;
+  gap: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--less-dark);
+}
+
+#side_nav .padded{
+  padding: 2.5rem 2.5rem 1rem;
+  gap: 2rem;
+}
+
+.img_wrapper{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.img_wrapper img{
+  width: 100%;
+}
+
+h5.username{
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.815rem;
+}
+
+.search_form label{
+  width: 30px;
+  padding: .5rem 1rem;
+  position: absolute;
+  top: 0%;
+  left: 0;
+}
+
+input.search_field{
+  padding: .5rem 1.5rem .5rem 3rem;
+  background-color: #333;
+  border: 0.5px solid #4f4f4f;
+  border-radius: 1rem;
+  
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
+input.search_field:focus{
+  outline: none;
+}
+
+button.sideNav_btn, button.task{
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: #f2f2f2;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.815rem;
+  padding: 1.5rem 2.5rem;
+}
+
+button.sideNav_btn.active{
+  background-color: var(--dark);
+}
+
+button.sideNav_btn:hover{
+  background-color: var(--dark);
+  opacity: .9;
+}
+

@@ -4,7 +4,7 @@ import './Nav.css'
 
 const Nav = () => {
   return (
-    <header className="d-flex justify-content-end align-items-center">
+    <header className="primary_nav d-flex justify-content-end align-items-center">
         <nav>
           <Switch>
             <Route exact path={['/', '/register']}>

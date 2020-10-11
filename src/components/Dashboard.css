@@ -1,0 +1,77 @@
+:root{
+  --primary: #2D9CDB;
+  --less-dark: #21262D;
+  --dark: #13171D;
+}
+
+main{
+  margin-left: 300px;
+}
+
+h3.title{
+  color: var(--primary);
+  font-size: 2.5rem;
+  line-height: 3.026rem;
+  font-weight: 600;
+}
+
+input.task_input{
+  padding: 1rem 2rem 1rem 4rem;
+  background-color: var(--less-dark);
+  color: #f2f2f2;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.815rem;
+
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+}
+
+input.task_input::placeholder{
+  color: #f2f2f2;
+}
+
+button.new_task-btn{
+  width: 40px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: var(--primary);
+  font-size: 2.5rem;
+  font-weight: 300;
+ 
+
+  position: absolute;
+  top: -2px;
+  left: 0;
+}
+
+.todos{
+  gap: 2rem;
+}
+
+.todos span{
+  padding: 1.5rem;
+  background-color: var(--less-dark);
+  color: #f2f2f2;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.815rem;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+}
+
+.completed:checked + p{
+  text-decoration: line-through;
+  opacity: .5;
+}
+
+p.tab_name{
+  color: #828282;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.815rem;
+  text-transform: capitalize;
+}

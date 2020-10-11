@@ -1,7 +1,6 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
-// import Row from 'react-bootstrap/Row'
-// import Col from 'react-bootstrap/Col'
 import './Landing.css'
 
 const Landing = () => {
@@ -17,7 +16,7 @@ const Landing = () => {
         <p className="w-50 text-center py-5">The easiest way to Organise, Track and be productive on all your tasks</p>
         <div className="hero_btn">
           <button className="btn btn_secondary mx-3">Support our cause</button>
-          <button className="btn btn_primary mx-3">Start checking</button>
+          <Link to="/login" className="btn btn_primary mx-3">Start checking</Link>
           </div>
       </section>
     </div>

@@ -21,7 +21,7 @@ const Register = () => {
   //   console.log(user)
   //   let res = await axios.post("/register", user )
   //   console.log(res)
-  // }
+  // } 
 
   const [userData, setUserData] = useState({});
   const handleInput = (e) => {
@@ -30,9 +30,10 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log(userData)
-    const res = await axios.post("/register", userData)
+    const res = await axios.post("/register", {data: userData})
     console.log(res.data)
   }
+
 
   return (
     <section id="sign_up" className="d-flex flex-column justify-content-center align-items-center">
