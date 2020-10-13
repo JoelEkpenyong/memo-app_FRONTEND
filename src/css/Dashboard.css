@@ -75,3 +75,16 @@ p.tab_name{
   line-height: 1.815rem;
   text-transform: capitalize;
 }
+
+.no_tasks{
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no_tasks p{
+  color: #4F4F4F;
+  font-size: 1.5rem;
+  font-weight: 600;
+}

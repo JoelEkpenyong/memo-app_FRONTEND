@@ -28,6 +28,7 @@ h5.username{
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.815rem;
+  text-transform: capitalize;
 }
 
 .search_form label{
@@ -74,5 +75,23 @@ button.sideNav_btn.active{
 button.sideNav_btn:hover{
   background-color: var(--dark);
   opacity: .9;
+}
+
+.logout_btn{
+  color: #4F4F4F;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  padding:0 2.5rem;
+  align-self: flex-start;
+
+  font-size: 1.5rem;
+  line-height: 1.815rem;
+  text-align: left;
+}
+
+.logout_btn:focus{
+  outline: none;
+  border: none;
 }
 

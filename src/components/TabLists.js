@@ -1,6 +1,6 @@
 import React from 'react'
 // import NewTab from './NewTab'
-import './TabLists.css'
+import '../css/TabLists.css'
 
 
 const TabLists = ({tabs, setCurrentTab, setShowAll}) => {
@@ -22,7 +22,6 @@ const TabLists = ({tabs, setCurrentTab, setShowAll}) => {
   return (
     <>
       <ul className="task_list">
-        
         {tablist}
       </ul>
     </>

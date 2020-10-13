@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
-import './NewTab.css'
+import '../css/NewTab.css'
 
-const NewTab = ({setTabs, tabs, setTodos, todos}) => {
+const NewTab = ({setTabs, tabs, setTodos, todos, setCurrentTab}) => {
   const [inputValue, setInputValue] = useState('')
 
   const addTabs = (e) => {
     e.preventDefault();
     setTabs([...tabs, inputValue])
+    setCurrentTab(inputValue)
     setInputValue('')
   }
 

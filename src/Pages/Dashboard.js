@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react'
-import './Dashboard.css'
-import SideNav from './SideNav'
+import '../css/Dashboard.css'
+import SideNav from '../components/SideNav'
 
 const Dashboard = () => {
-  const [todos, setTodos] = useState({todos: []})
-  const [tabs, setTabs] = useState(['todos'])
+  const [todos, setTodos] = useState({})
+  const [tabs, setTabs] = useState([])
   const [newTodo, setNewTodo] = useState('')
-  const [currentTab, setCurrentTab] = useState('todos')
+  const [currentTab, setCurrentTab] = useState('tasks')
   const [showAll, setShowAll] = useState(false)
 
   const initalTodoObj = () => {
@@ -23,14 +23,21 @@ const Dashboard = () => {
 
   const displayTodos = () => {
     if(!showAll) {
-      return (
-        todos[currentTab.split(' ').join('')].map((todo, idx) => (
-        <span key={idx} className="todo d-flex align-items-center">
-          <input type="checkbox" className="completed"/>
-          <p className="m-0 pl-4">{todo}</p>
-        </span> 
-      )
-    ))
+      try{
+        return (
+            todos[currentTab.split(' ').join('')].map((todo, idx) => (
+            <span key={idx} className="todo d-flex align-items-center">
+              <input type="checkbox" className="completed"/>
+              <p className="m-0 pl-4">{todo}</p>
+            </span> 
+          )
+        ))}catch{
+          return (
+            <div className="no_tasks">
+              <p>No Tasks Yet</p>
+            </div>
+          )
+        }
   } else {
     let entries = Object.entries(todos)
     let list
@@ -54,10 +61,11 @@ const Dashboard = () => {
 
   const addNewTodo = (e) => {
     e.preventDefault()
+    if(newTodo !== '') {
     let activeTab = currentTab.split(' ').join('')
     let currentTodoObj = todos[activeTab] 
     setTodos({...todos, [activeTab]: [...currentTodoObj, newTodo]})
-    setNewTodo('')
+    setNewTodo('') }
   }
 
 

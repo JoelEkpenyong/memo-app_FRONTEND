@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {Link} from 'react-router-dom'
+import { AuthContext } from '../context/AuthContext'
 
-import './Landing.css'
+import '../css/Landing.css'
 
 const Landing = () => {
+  const authContext = useContext(AuthContext)
   return (
     <div className="wrapper">
       <section id="hero" className="d-flex flex-column align-items-center justify-content-center">
@@ -16,7 +18,7 @@ const Landing = () => {
         <p className="w-50 text-center py-5">The easiest way to Organise, Track and be productive on all your tasks</p>
         <div className="hero_btn">
           <button className="btn btn_secondary mx-3">Support our cause</button>
-          <Link to="/login" className="btn btn_primary mx-3">Start checking</Link>
+          <Link to={authContext.isAuthenticated()? '/dashboard' : '/login'} className="btn btn_primary mx-3">Start checking</Link>
           </div>
       </section>
     </div>
