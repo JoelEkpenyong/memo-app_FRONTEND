@@ -4,7 +4,7 @@ import '../css/SideNav.css'
 import TabLists from './TabLists'
 import { AuthContext } from '../context/AuthContext'
 
-const SideNav = ({tabs, setTabs, setCurrentTab, setTodos, todos, setShowAll, showAll}) => {
+const SideNav = ({tabs, setTabs, setCurrentTab, setTodos, todos, setShowAll, showAll, getList}) => {
   const [showForm, setShowForm] = useState(false)
   const auth = useContext(AuthContext)
   const {authState} = auth
@@ -36,9 +36,9 @@ const SideNav = ({tabs, setTabs, setCurrentTab, setTodos, todos, setShowAll, sho
         <div className="padded py-0">
           <hr style={{borderTop: '1px solid #333', backgroundColor: '#333'}}/>
           <span className="d-flex justify-content-between align-items-center"><p className="py-4 m-0">Personal Lists</p> <button className="new_list-btn" onClick={() => (showForm ? setShowForm(false) : setShowForm(true))}>+</button></span>
-          {showForm && <NewTab setTabs={setTabs} tabs={tabs} setTodos={setTodos} todos={todos} setCurrentTab={setCurrentTab} />}
+          {showForm && <NewTab setTabs={setTabs} tabs={tabs} setTodos={setTodos} todos={todos} setCurrentTab={setCurrentTab} getList={getList}  />}
         </div>
-          <TabLists tabs={tabs} setCurrentTab={setCurrentTab} setTodos={setTodos} todos={todos} setShowAll={setShowAll} showForm={showForm} />
+          <TabLists tabs={tabs} setCurrentTab={setCurrentTab} setTodos={setTodos} todos={todos} setShowAll={setShowAll} showForm={showForm}/>
         <button className="logout_btn mt-auto mb-5" onClick={auth.logout}>
         <svg className="mr-3" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fillRule="evenodd" clipRule="evenodd" d="M3.96057 3.70801C4.20469 3.95205 4.20476 4.34778 3.96072 4.59189C3.26162 5.29122 2.78558 6.18214 2.59278 7.152C2.39999 8.12186 2.4991 9.12711 2.87759 10.0406C3.25607 10.9542 3.89694 11.735 4.71915 12.2843C5.54136 12.8336 6.50799 13.1269 7.49683 13.1269C8.48567 13.1269 9.4523 12.8336 10.2745 12.2843C11.0967 11.735 11.7376 10.9542 12.1161 10.0406C12.4946 9.12711 12.5937 8.12186 12.4009 7.152C12.2081 6.18214 11.732 5.29122 11.0329 4.59189C10.7889 4.34778 10.789 3.95205 11.0331 3.70801C11.2772 3.46397 11.6729 3.46404 11.917 3.70815C12.7908 4.58231 13.3859 5.69596 13.6269 6.90829C13.8679 8.12061 13.744 9.37718 13.2709 10.5191C12.7978 11.661 11.9967 12.637 10.9689 13.3237C9.94117 14.0103 8.73288 14.3769 7.49683 14.3769C6.26078 14.3769 5.05249 14.0103 4.02473 13.3237C2.99696 12.637 2.19589 11.661 1.72278 10.5191C1.24967 9.37718 1.12578 8.12061 1.36677 6.90829C1.60776 5.69596 2.20282 4.58231 3.07669 3.70815C3.32073 3.46404 3.71646 3.46397 3.96057 3.70801Z" fill="#4F4F4F"/>

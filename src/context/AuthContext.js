@@ -1,4 +1,4 @@
-import React, {useState, createContext } from 'react';
+import React, {useState, createContext} from 'react';
 import {useHistory} from 'react-router-dom'
 
 const AuthContext = createContext();
@@ -16,6 +16,7 @@ const AuthProvider = ({ children }) => {
 
   const logout = () => {
     localStorage.removeItem('userInfo')
+    localStorage.removeItem('Lists')
     setAuthState({data: {}})
     history.push('/login')
   }
