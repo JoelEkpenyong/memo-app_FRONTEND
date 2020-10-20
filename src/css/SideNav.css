@@ -101,6 +101,10 @@ button.sideNav_btn:hover{
     left: -50%;
     width: 50%;
   }
+
+#side_nav .search_form{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 400px){
