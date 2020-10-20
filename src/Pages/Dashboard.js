@@ -39,7 +39,7 @@ const Dashboard = () => {
       localStorage.setItem('Lists', JSON.stringify(arr))
 
     }catch(err){
-      console.log(err.message)
+      console.log(err.message) 
     }
   
   }
@@ -126,14 +126,33 @@ const Dashboard = () => {
     setPayload({...payload, [e.target.name]: e.target.value})
   }
 
+  const toggleNav  = () => {
+    let main = document.querySelector("main")
+    let nav = document.querySelector('#side_nav')
+
+    nav.classList.toggle('show')
+    main.classList.toggle('hide')
+  }
+
 
 
   return (
     <div className="dashboard_wrapper">
-     <SideNav tabs={tabs} setTabs={setTabs} setCurrentTab={setCurrentTab} setTodos={setTodos} todos={todos} setShowAll={setShowAll} showAll={showAll} getList={getList} />
+     <SideNav tabs={tabs} setTabs={setTabs} toggleNav={toggleNav} setCurrentTab={setCurrentTab} setTodos={setTodos} todos={todos} setShowAll={setShowAll} showAll={showAll} getList={getList} />
       <main className="p-5">
-        <h3 className="title pb-3" style={{textTransform: 'capitalize'}}>{showAll? `All Tasks` :currentTab}</h3>
-        <form className="w-100 position-relative" onSubmit={addNewTodo}>
+        <div className="d-inline-flex align-items-center justify-content-center pb-3">
+          <div className="hamburger pr-3" style={{fontSize: '2.5rem'}} onClick={toggleNav}>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+              <g fill="none">
+                <path d="M2 5.995c0-.55.446-.995.995-.995h8.01a.995.995 0 0 1 0 1.99h-8.01A.995.995 0 0 1 2 5.995z" fill="#2D9CDB"/>
+                <path d="M2 12c0-.55.446-.995.995-.995h18.01a.995.995 0 1 1 0 1.99H2.995A.995.995 0 0 1 2 12z" fill="#2D9CDB"/>
+                <path d="M2.995 17.01a.995.995 0 0 0 0 1.99h12.01a.995.995 0 0 0 0-1.99H2.995z" fill="#2D9CDB"/>
+              </g>
+            </svg>
+          </div>
+          <h3 className="title m-0" style={{textTransform: 'capitalize'}}>{showAll? `All Tasks` :currentTab}</h3>
+        </div>
+        <form className="w-100 position-relative my-3" onSubmit={addNewTodo}>
           <input className="task_input w-100" type="text" name="title" value={newTodo} placeholder="Add Task" onChange={handleInput} />
           <button className="new_task-btn">+</button>
         </form>

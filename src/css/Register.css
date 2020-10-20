@@ -9,7 +9,7 @@
 }
 
 .input_wrapper{
-  width: 30%;
+  width: min(300px, 80%);
   position: relative;
   margin: 2rem 0;
 }
@@ -59,7 +59,7 @@
   text-align: center;
   opacity: .9;
 
-  width: 30%;
+  width: min(300px, 80%);
   padding: 1.8rem 2.8rem;
   border: none;
   border-radius: 1rem;
@@ -73,7 +73,7 @@
 }
 
 .signUp_form span{
-  width: 30%;
+  width: min(300px, 80%);
   text-align: center;
   font-weight: 600;
   font-size: 1rem;
@@ -86,7 +86,7 @@
 .signUp_form span::after{
   content: '';
   display: block;
-  width: 14rem;
+  width: 40%;
   border-bottom: 1px solid #333;
   position: absolute;
   top: 5px;
@@ -94,4 +94,10 @@
 
 .signUp_form span::before{
   right: 0;
+}
+
+@media screen and (max-width: 450px){
+  .primary_nav{
+    padding-right: 3rem;
+  }
 }

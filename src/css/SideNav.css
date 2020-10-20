@@ -1,11 +1,12 @@
 #side_nav{
-  width: 300px;
+  width: min(300px, 30%);
   height: 100vh;
   gap: 2rem;
   position: fixed;
   top: 0;
   left: 0;
   background-color: var(--less-dark);
+  transition: all .5s ease;
 }
 
 #side_nav .padded{
@@ -93,5 +94,19 @@ button.sideNav_btn:hover{
 .logout_btn:focus{
   outline: none;
   border: none;
+}
+
+@media screen and (max-width: 640px){
+  #side_nav{
+    left: -50%;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 400px){
+  #side_nav{
+    left: -100%;
+    width: 100%;
+  }
 }
 

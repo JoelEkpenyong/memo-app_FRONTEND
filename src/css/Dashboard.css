@@ -5,7 +5,8 @@
 }
 
 main{
-  margin-left: 300px;
+  margin-left: min(300px, 30%);
+  transition: opacity 1.5s ease;
 }
 
 h3.title{
@@ -87,4 +88,37 @@ p.tab_name{
   color: #4F4F4F;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.hamburger{
+  display: none;
+}
+
+.show{
+  left: 0 !important;
+  z-index: 999;
+}
+
+.hide{
+  opacity: .1;
+}
+
+@media screen and (max-width: 800px){
+  .new_task-form button{
+    padding: .5rem;
+  }
+}
+
+@media screen and (max-width: 640px){
+  #side_nav{
+    left: -30%;
+  }
+
+  main{
+    margin-left: 0;
+  }
+
+  .hamburger{
+    display: block;
+  }
 }

@@ -15,7 +15,7 @@ const Landing = () => {
           <path d="M18 26.864L27.9574 36.7702L42 22.8" stroke="#F2F2F2" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
         <h3 className="pt-3">checkme</h3>
-        <p className="w-50 text-center py-5">The easiest way to Organise, Track and be productive on all your tasks</p>
+        <p className="px-5 px-sm-0 text-center py-5">The easiest way to Organise, Track and be productive on all your tasks</p>
         <div className="hero_btn">
           <button className="btn btn_secondary mx-3">Support our cause</button>
           <Link to={authContext.isAuthenticated()? '/dashboard' : '/login'} className="btn btn_primary mx-3">Start checking</Link>

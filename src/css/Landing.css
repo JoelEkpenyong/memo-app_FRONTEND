@@ -19,5 +19,28 @@
 
 #hero p{
   font-weight: 400;
+  width: 50%;
+}
+
+@media screen and (max-width: 576px){
+  #hero p{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .hero_btn{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 75%;
+  }
+  .primary_nav{
+    padding-right: 3rem;
+  }
+
+  #hero h3, #hero p{
+    font-size: 2.5rem;
+  }
 }
 
