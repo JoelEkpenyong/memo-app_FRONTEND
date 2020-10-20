@@ -107,7 +107,7 @@ button.sideNav_btn:hover{
   }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
   #side_nav{
     left: -100%;
     width: 100%;
