@@ -17,11 +17,11 @@ const SideNav = ({tabs, setTabs, toggleNav, setCurrentTab, setTodos, todos, setS
               <h5 className="username">{authState.data.fullname}</h5>
             </span>
             <div className="hamburger pr-3" style={{fontSize: '2.5rem'}} onClick={toggleNav}>
-              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <g fill="none">
-                  <path d="M2 5.995c0-.55.446-.995.995-.995h8.01a.995.995 0 0 1 0 1.99h-8.01A.995.995 0 0 1 2 5.995z" fill="#2D9CDB"/>
-                  <path d="M2 12c0-.55.446-.995.995-.995h18.01a.995.995 0 1 1 0 1.99H2.995A.995.995 0 0 1 2 12z" fill="#2D9CDB"/>
-                  <path d="M2.995 17.01a.995.995 0 0 0 0 1.99h12.01a.995.995 0 0 0 0-1.99H2.995z" fill="#2D9CDB"/>
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <g fill="none"><path d="M12 12l7 7" stroke="#2D9CDB" stroke-width="2" stroke-linecap="round" class="il-md-length-15 il-md-duration-4 il-md-delay-0"/>
+                  <path d="M12 12L5 5" stroke="#2D9CDB" stroke-width="2" stroke-linecap="round" class="il-md-length-15 il-md-duration-4 il-md-delay-0"/>
+                  <path d="M12 12l-7 7" stroke="#2D9CDB" stroke-width="2" stroke-linecap="round" class="il-md-length-15 il-md-duration-4 il-md-delay-0"/>
+                  <path d="M12 12l7-7" stroke="#2D9CDB" stroke-width="2" stroke-linecap="round" class="il-md-length-15 il-md-duration-4 il-md-delay-0"/>
                 </g>
               </svg>
             </div>
